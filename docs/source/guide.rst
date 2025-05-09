@@ -62,7 +62,7 @@ The output will include:
     3. Source locations of functions
     4. Return types of functions
     5. Function parameter lists
-    6. Source locations of ``for`` loops
+    6. Source locations of loops
     7. ...
 
 Next, run the following command to insert attributes into the program and test it using a given compiler

@@ -5,7 +5,7 @@ This document provides an overview of the bugs identified.
 Each entry links to the corresponding bug tracking page for more detailed information.
 
 =================  =======  
-    Debugger           Bug ID      
+    Compiler           Bug ID      
 =================  =======  
 GCC                `112709 <https://gcc.gnu.org/bugzilla/show_bug.cgi?id=112709>`_   
 GCC                `112860 <https://gcc.gnu.org/bugzilla/show_bug.cgi?id=112860>`_        
