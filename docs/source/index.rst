@@ -19,21 +19,21 @@ These requirements will ensure a smooth experience.
 Getting Started (Kick-the-tire)
 ---------------
 
-To begin, please download the artifact from Zenodo using this link: [`Artifact <https://doi.org/10.5281/zenodo.14053328>`_]. Once downloaded, extract the artifact archive, which may take around 10 minutes:
+To begin, please download the artifact from Zenodo using this link: [`Artifact <https://doi.org/10.5281/zenodo.15375790>`_]. Once downloaded, extract the artifact archive, which may take around 10-30 minutes:
 
 .. code-block:: console
 
-  $ gunzip -c arise.tar.gz > arise.tar
-  $ cat arise.tar | docker import - arise  # ~10 minutes
+  $ gunzip -c arise.tar.gz > arise.tar  # 10~30 minutes
 
 Starting the Container
 ----------------------
 
-Once you have either imported or pulled the image, please use the following commands to start the container. This setup will grant the container the necessary permissions to run the evaluation smoothly.
+Once you have imported the image, please use the following commands to start the container. This setup will grant the container the necessary permissions to run the evaluation smoothly.
 
 .. code-block:: console
 
-  $ docker run -itd --privileged --cap-add sys_ptrace --security-opt seccomp=unconfined --name devil devil /bin/bash
+  $ docker load -i arise.tar
+  $ docker run -it --name arise compiler_testing:arise /bin/bash
 
 .. note::
 
