@@ -19,7 +19,7 @@ These requirements will ensure a smooth experience.
 Getting Started (Kick-the-tire)
 ---------------
 
-To begin, please download the artifact from Zenodo using this link: [`Artifact <https://doi.org/10.5281/zenodo.15375790>`_]. Once downloaded, extract the artifact archive, which may take around 10-30 minutes:
+To begin, please download the artifact from Zenodo using this link: [`Artifact <https://doi.org/10.5281/zenodo.15375789>`_]. Once downloaded, extract the artifact archive, which may take around 10-30 minutes:
 
 .. code-block:: console
 
