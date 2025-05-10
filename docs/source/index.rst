@@ -8,7 +8,7 @@ Please feel free to reach out if you encounter any issues or have feedback.
 Prerequisites
 --------------
 
-For optimal performance and reasonable evaluation time (approximately 2 hours), we recommend running the full evaluation on a machine with the following specifications:
+For optimal performance, we recommend running the full evaluation on a machine with the following specifications:
 
 - **CPU**: 16 cores or more
 - **Memory**: At least 32 GB

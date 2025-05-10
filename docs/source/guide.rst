@@ -19,7 +19,7 @@ Once inside the container, navigate to the appropriate directory and execute the
 
    $ cd /home/code
 
-The files in the code directory are as follows:
+The files in the ``code`` directory are as follows:
 
 .. code-block:: text
 
@@ -51,7 +51,7 @@ To parse a C program using this tool, take ``test.c`` in the ``some_tool`` direc
 
 .. code-block:: console
 
-   $ tool_clang test.c
+   $ ./tool_clang test.c
 
 The output will include: 
 
@@ -72,7 +72,7 @@ Next, run the following command to insert attributes into the program and test i
    $ python3 insert_attributes_gcc.py --compiler gcc --source 0 --multi 0       #for gcc
    $ python3 insert_attributes_clang.py --compiler clang --source 0 --multi 0   #for clang
 
-The instrumented program can be accessed in the /tmp directory.
+The instrumented program can be accessed in the ``/tmp`` directory.
 
 Once the process starts, a results directory named in the format ``Arise-<timestamp>`` will be generated in the current working directory. The contents of this folder are organized as follows:
 
