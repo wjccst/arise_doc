@@ -72,7 +72,7 @@ Next, run the following command to insert attributes into the program and test i
    $ python3 insert_attributes_gcc.py --compiler gcc --source 0 --multi 0       #for gcc
    $ python3 insert_attributes_clang.py --compiler clang --source 0 --multi 0   #for clang
 
-The instrumented program can be accessed in the ``/tmp`` directory.
+The instrumented program can be accessed in the ``/home/code/InsertAttr/work`` directory. The ``work`` directory contains many subfolders, each named with a randomly generated 8-character string. Each folder contains both the original program and the instrumented mutants.
 
 Once the process starts, a results directory named in the format ``Arise-<timestamp>`` will be generated in the current working directory. The contents of this folder are organized as follows:
 

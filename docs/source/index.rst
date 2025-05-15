@@ -23,7 +23,7 @@ To begin, please download the artifact from Zenodo using this link: [`Artifact <
 
 .. code-block:: console
 
-  $ gunzip -c arise.tar.gz > arise.tar  # 10~30 minutes
+  $ gunzip -c arise.tar.gz > arise.tar  # 10~20 minutes
 
 Starting the Container
 ----------------------
