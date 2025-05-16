@@ -68,7 +68,7 @@ The output will include:
 Next, run the following command to insert attributes into the program and test it using a given compiler
 
 .. code-block:: console
-
+   $ export LD_LIBRARY_PATH=/home/software/gcc-trunk/lib64:$LD_LIBRARY_PATH     #set up the sanitizer environment variables
    $ python3 insert_attributes_gcc.py --compiler gcc --source 0 --multi 0       #for gcc
    $ python3 insert_attributes_clang.py --compiler clang --source 0 --multi 0   #for clang
 
@@ -84,3 +84,7 @@ Once the process starts, a results directory named in the format ``Arise-<timest
     ├── BUG.log     # describes each discovered bug
     ├── ERR.log     # logs errors encountered during execution
     └── INFO.log    # records compilation details, including the number of successfully compiled variants for each test case
+
+.. note::
+
+   If an error occurs during execution, you can find the source code files from the [`Zenodo <https://doi.org/10.5281/zenodo.14645190>`_] link and replace the files with the same names in directory a, then rerun the program.
