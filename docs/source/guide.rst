@@ -87,4 +87,4 @@ Once the process starts, a results directory named in the format ``Arise-<timest
 
 .. note::
 
-   If an error occurs during execution, you can find the source code files from the [`Zenodo <https://doi.org/10.5281/zenodo.14645190>`_] link and replace the files with the same names in directory ``code``, then rerun the program.
+   If any errors occur while running the Python code, you can find the source code files from the [`Zenodo <https://doi.org/10.5281/zenodo.14645190>`_] link and replace all Python files in directory ``code`` with the ones from the link, then rerun the Python code.
