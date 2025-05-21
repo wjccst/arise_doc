@@ -118,7 +118,7 @@ To compile and install different versions of GCC and Clang, you can use the prov
 Save the script above as ``build_gcc.sh`` in the ``/home/compiler`` directory. It accepts two arguments: one for the GCC installation directory and another for the GCC release version. 
 For example:
 
-.. code-block:: text
+.. code-block:: console
    ./build_gcc.sh /home/software/gcc_14.2 releases/gcc-14.2.0
 
 The GCC installation directory id ``/home/software/gcc_14.2``, the GCC release version is ``gcc-14.2.0``
@@ -152,7 +152,7 @@ The GCC installation directory id ``/home/software/gcc_14.2``, the GCC release v
 Save the script above as ``build_clang.sh`` in the ``/home/compiler`` directory. It accepts two arguments: one for the LLVM installation directory and another for the LLVM release version. 
 For example:
 
-.. code-block:: text
+.. code-block:: console
    ./build_clang.sh /home/software/clang_19.1 llvmorg-19.1.0
 
 The LLVM installation directory id ``/home/software/clang_19.1``, the LLVM release version is ``llvmorg-19.1.0``
