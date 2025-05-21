@@ -68,6 +68,7 @@ The output will include:
 Next, run the following command to insert attributes into the program and test it using a given compiler
 
 .. code-block:: console
+
    $ export LD_LIBRARY_PATH=/home/software/gcc-trunk/lib64:$LD_LIBRARY_PATH     #set up the sanitizer environment variables
    $ python3 insert_attributes_gcc.py --compiler gcc --source 0 --multi 0       #for gcc
    $ python3 insert_attributes_clang.py --compiler clang --source 0 --multi 0   #for clang
@@ -91,7 +92,7 @@ Once the process starts, a results directory named in the format ``Arise-<timest
 
 To compile and install different versions of GCC and Clang, you can use the provided shell scripts below:
 
-.. code-block:: text
+.. code-block:: bash
 
    #!/bin/sh
 
@@ -120,11 +121,12 @@ Save the script above as ``build_gcc.sh`` in the ``/home/compiler`` directory. I
 For example:
 
 .. code-block:: console
+
    $ ./build_gcc.sh /home/software/gcc_14.2 releases/gcc-14.2.0
 
 The GCC installation directory id ``/home/software/gcc_14.2``, the GCC release version is ``gcc-14.2.0``
 
-.. code-block:: text
+.. code-block:: bash
 
    #!/bin/sh
 
@@ -155,9 +157,11 @@ Save the script above as ``build_clang.sh`` in the ``/home/compiler`` directory.
 For example:
 
 .. code-block:: console
+
    $ ./build_clang.sh /home/software/clang_19.1 llvmorg-19.1.0
 
 The LLVM installation directory id ``/home/software/clang_19.1``, the LLVM release version is ``llvmorg-19.1.0``
 
 .. note::
+
    You need to grant execution permission to the shell file using ``chmod +x your_script.sh`` command.
