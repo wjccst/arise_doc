@@ -92,7 +92,7 @@ Once the process starts, a results directory named in the format ``Arise-<timest
 To compile and install different versions of GCC and Clang, you can use the provided shell scripts below:
 
 .. code-block:: text
-   
+
    #!/bin/sh
 
    export REPO_PATH=/home/compiler/gcc-source
@@ -120,7 +120,7 @@ Save the script above as ``build_gcc.sh`` in the ``/home/compiler`` directory. I
 For example:
 
 .. code-block:: console
-   ./build_gcc.sh /home/software/gcc_14.2 releases/gcc-14.2.0
+   $ ./build_gcc.sh /home/software/gcc_14.2 releases/gcc-14.2.0
 
 The GCC installation directory id ``/home/software/gcc_14.2``, the GCC release version is ``gcc-14.2.0``
 
@@ -155,8 +155,9 @@ Save the script above as ``build_clang.sh`` in the ``/home/compiler`` directory.
 For example:
 
 .. code-block:: console
-   ./build_clang.sh /home/software/clang_19.1 llvmorg-19.1.0
+   $ ./build_clang.sh /home/software/clang_19.1 llvmorg-19.1.0
 
 The LLVM installation directory id ``/home/software/clang_19.1``, the LLVM release version is ``llvmorg-19.1.0``
 
-You need to grant execution permission to the shell file using ``chmod +x your_script.sh`` command.
+.. note::
+   You need to grant execution permission to the shell file using ``chmod +x your_script.sh`` command.
