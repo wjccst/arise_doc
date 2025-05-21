@@ -91,7 +91,7 @@ Once the process starts, a results directory named in the format ``Arise-<timest
 
 To compile and install different versions of GCC and Clang, you can use the provided shell scripts below:
 
-.. code-block:: bash
+.. code-block:: text
    #!/bin/sh
 
    export REPO_PATH=/home/compiler/gcc-source
@@ -118,7 +118,7 @@ To compile and install different versions of GCC and Clang, you can use the prov
 Save the script above as ``build_gcc.sh`` in the ``/home/compiler`` directory. It accepts two arguments: one for the GCC installation directory and another for the GCC release version. 
 For example:
 
-.. code-block:: bash
+.. code-block:: text
    ./build_gcc.sh /home/software/gcc_14.2 releases/gcc-14.2.0
 
 The GCC installation directory id ``/home/software/gcc_14.2``, the GCC release version is ``gcc-14.2.0``
