@@ -92,6 +92,7 @@ Once the process starts, a results directory named in the format ``Arise-<timest
 To compile and install different versions of GCC and Clang, you can use the provided shell scripts below:
 
 .. code-block:: text
+   
    #!/bin/sh
 
    export REPO_PATH=/home/compiler/gcc-source
@@ -124,6 +125,7 @@ For example:
 The GCC installation directory id ``/home/software/gcc_14.2``, the GCC release version is ``gcc-14.2.0``
 
 .. code-block:: text
+
    #!/bin/sh
 
    export REPO_PATH=/home/compiler/llvm-source
