@@ -123,7 +123,7 @@ For example:
 
 The GCC installation directory id ``/home/software/gcc_14.2``, the GCC release version is ``gcc-14.2.0``
 
-.. code-block:: bash
+.. code-block:: text
    #!/bin/sh
 
    export REPO_PATH=/home/compiler/llvm-source
@@ -152,7 +152,7 @@ The GCC installation directory id ``/home/software/gcc_14.2``, the GCC release v
 Save the script above as ``build_clang.sh`` in the ``/home/compiler`` directory. It accepts two arguments: one for the LLVM installation directory and another for the LLVM release version. 
 For example:
 
-.. code-block:: bash
+.. code-block:: text
    ./build_clang.sh /home/software/clang_19.1 llvmorg-19.1.0
 
 The LLVM installation directory id ``/home/software/clang_19.1``, the LLVM release version is ``llvmorg-19.1.0``
