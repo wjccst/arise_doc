@@ -146,7 +146,6 @@ The GCC installation directory id ``/home/software/gcc_14.2``, the GCC release v
    mkdir clang_build
    cd clang_build
 
-   # git -C $REPO_PATH checkout llvmorg-18.0.0
    git -C $REPO_PATH checkout $2
 
    cmake $REPO_PATH/llvm -G Ninja -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_PROJECTS=clang -DLLVM_INCLUDE_BENCHMARKS=OFF -DLLVM_INCLUDE_TESTS=OFF -DLLVM_USE_NEWPM=ON -DLLVM_TARGETS_TO_BUILD=X86 -DCMAKE_INSTALL_PREFIX=$INSTALL_PATH -DLLVM_LINK_LLVM_DYLIB=ON -DLLVM_BUILD_LLVM_DYLIB=ON -DLLVM_BUILD_INSTRUMENTED_COVERAGE=ON
