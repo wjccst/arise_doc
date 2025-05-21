@@ -124,7 +124,7 @@ For example:
 
    $ ./build_gcc.sh /home/software/gcc_14.2 releases/gcc-14.2.0
 
-The GCC installation directory id ``/home/software/gcc_14.2``, the GCC release version is ``gcc-14.2.0``
+The GCC installation directory id ``/home/software/gcc_14.2``, the GCC release version is ``gcc-14.2.0``. After the script finishes running, you can use the ``/home/software/gcc_14.2/bin/gcc -v`` command to verify whether ``gcc`` was successfully installed.
 
 .. code-block:: bash
 
@@ -160,7 +160,7 @@ For example:
 
    $ ./build_clang.sh /home/software/clang_19.1 llvmorg-19.1.0
 
-The LLVM installation directory id ``/home/software/clang_19.1``, the LLVM release version is ``llvmorg-19.1.0``
+The LLVM installation directory id ``/home/software/clang_19.1``, the LLVM release version is ``llvmorg-19.1.0``. After the script finishes running, you can use the ``/home/software/clang_19.1/bin/clang -v`` command to verify whether ``clang`` was successfully installed.
 
 .. note::
 
