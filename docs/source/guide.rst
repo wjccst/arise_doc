@@ -88,3 +88,73 @@ Once the process starts, a results directory named in the format ``Arise-<timest
 .. note::
 
    If any errors occur while running the Python code, you can find the source code files from the [`Zenodo <https://doi.org/10.5281/zenodo.14645190>`_] link and replace all Python files in directory ``code`` with the ones from the link, then rerun the Python code.
+
+To compile and install different versions of GCC and Clang, you can use the provided shell scripts below:
+
+.. code-block:: bash
+   #!/bin/sh
+
+   export REPO_PATH=/home/compiler/gcc-source
+   export INSTALL_PATH=$1
+   export CC=gcc
+   export CXX=g++
+   rm -rf $INSTALL_PATH
+   mkdir $INSTALL_PATH
+
+   git clone https://github.com/gcc-mirror/gcc.git $REPO_PATH
+
+   cd $REPO_PATH
+   git checkout $2
+   ./contrib/download_prerequisites
+   cd ..
+   rm -rf gcc_build
+   mkdir gcc_build
+   cd gcc_build
+   ../gcc/configure --disable-multilib --disable-bootstrap --enable-languages=c,c++ --prefix=$INSTALL_PATH --enable-coverage --disable-werror --enable-checking=yes
+
+   make -j$(($(nproc) - 2))
+   make install
+
+Save the script above as ``build_gcc.sh`` in the ``/home/compiler`` directory. It accepts two arguments: one for the GCC installation directory and another for the GCC release version. 
+For example:
+
+.. code-block:: bash
+   ./build_gcc.sh /home/software/gcc_14.2 releases/gcc-14.2.0
+
+The GCC installation directory id ``/home/software/gcc_14.2``, the GCC release version is ``gcc-14.2.0``
+
+.. code-block:: bash
+   #!/bin/sh
+
+   export REPO_PATH=/home/compiler/llvm-source
+   export INSTALL_PATH=$1
+   export CC=clang
+   export CXX=clang++
+   rm -rf $INSTALL_PATH
+   mkdir $INSTALL_PATH
+
+   git clone https://github.com/llvm/llvm-project.git $REPO_PATH
+
+   cd $REPO_PATH
+   cd ..
+
+   rm -rf clang_build
+   mkdir clang_build
+   cd clang_build
+
+   # git -C $REPO_PATH checkout llvmorg-18.0.0
+   git -C $REPO_PATH checkout $2
+
+   cmake $REPO_PATH/llvm -G Ninja -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_PROJECTS=clang -DLLVM_INCLUDE_BENCHMARKS=OFF -DLLVM_INCLUDE_TESTS=OFF -DLLVM_USE_NEWPM=ON -DLLVM_TARGETS_TO_BUILD=X86 -DCMAKE_INSTALL_PREFIX=$INSTALL_PATH -DLLVM_LINK_LLVM_DYLIB=ON -DLLVM_BUILD_LLVM_DYLIB=ON -DLLVM_BUILD_INSTRUMENTED_COVERAGE=ON
+
+   ninja -j$(($(nproc) - 2)) install
+
+Save the script above as ``build_clang.sh`` in the ``/home/compiler`` directory. It accepts two arguments: one for the LLVM installation directory and another for the LLVM release version. 
+For example:
+
+.. code-block:: bash
+   ./build_clang.sh /home/software/clang_19.1 llvmorg-19.1.0
+
+The LLVM installation directory id ``/home/software/clang_19.1``, the LLVM release version is ``llvmorg-19.1.0``
+
+You need to grant execution permission to the shell file using ``chmod +x your_script.sh`` command.
