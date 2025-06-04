@@ -43,7 +43,7 @@ Once you have imported the image, please use the following commands to start the
 Next Steps
 ----------
 
-Once the container is up and running, you can follow the detailed instructions provided in the :doc:`/guide` section within the container. These instructions will guide you through using Arise.
+Once the container is up and running, you can follow the detailed instructions provided in the :doc:`/guide` section within the container. These instructions will guide you through using Atlas.
 
 Contents
 --------
