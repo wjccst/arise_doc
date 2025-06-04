@@ -1,7 +1,7 @@
-Welcome to the Arise ATC'25 Artifact!
+Welcome to the Atlas ATC'25 Artifact!
 =========================================
 
-Thank you for your interest in Arise! 
+Thank you for your interest in Atlas! 
 This document will guide you through the prerequisites and steps needed to set up and show the results described in our ATC'25 paper. 
 Please feel free to reach out if you encounter any issues or have feedback.
 
@@ -23,7 +23,7 @@ To begin, please download the artifact from Zenodo using this link: [`Artifact <
 
 .. code-block:: console
 
-  $ gunzip -c arise.tar.gz > arise.tar  # 10~20 minutes
+  $ gunzip -c atlas.tar.gz > atlas.tar  # 10~20 minutes
 
 Starting the Container
 ----------------------
@@ -32,8 +32,8 @@ Once you have imported the image, please use the following commands to start the
 
 .. code-block:: console
 
-  $ docker load -i arise.tar
-  $ docker run -it --name arise compiler_testing:arise /bin/bash
+  $ docker load -i atlas.tar
+  $ docker run -it --name atlas compiler_testing:atlas /bin/bash
 
 .. note::
 

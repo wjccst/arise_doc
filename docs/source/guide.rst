@@ -9,7 +9,7 @@ You can use the following command to enter the container:
 
 .. code-block:: console
 
-   $ docker exec -it arise /bin/bash
+   $ docker exec -it atlas /bin/bash
 
 
 Once inside the container, navigate to the appropriate directory and execute the following commands:
@@ -75,11 +75,11 @@ Next, run the following command to insert attributes into the program and test i
 
 The instrumented program can be accessed in the ``/home/code/InsertAttr/work`` directory. The ``work`` directory contains many subfolders, each named with a randomly generated 8-character string. Each folder contains both the original program and the instrumented mutants.
 
-Once the process starts, a results directory named in the format ``Arise-<timestamp>`` will be generated in the current working directory. The contents of this folder are organized as follows:
+Once the process starts, a results directory named in the format ``<tool>-<timestamp>`` will be generated in the current working directory. The contents of this folder are organized as follows:
 
 .. code-block:: text
 
-    Arise-<timestamp>/
+    <tool>-<timestamp>/
     ├── bug/        # contains test cases that triggered misoptimization bugs
     ├── crash/      # contains test cases that triggered compiler crashes
     ├── BUG.log     # describes each discovered bug

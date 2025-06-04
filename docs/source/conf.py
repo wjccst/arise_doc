@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Arise-Artifact'
+project = 'Atlas-Artifact'
 copyright = '2025, Jiangchang Wu'
 author = 'Jiangchang Wu'
 release = '0.0.1'
